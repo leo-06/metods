@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp18
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string l = "world";
+            //string login = "g39fаgksl";
+            if (l.Length < 2 || l.Length > 10)
+            {
+                Console.WriteLine("Неверная длина текста (не менее 2 и не более 10 символов");
+            }
+
+            if (Char.IsDigit(l[0]))
+            {
+                Console.WriteLine("Неверный формат ввода текста");
+            }
+            bool flag = true;
+            for (int i = 0; i < l.Length; i++)
+            {
+                if (!(Char.IsDigit(l[i]) || l[i] >= 'a' && l[i] <= 'z' || l[i] >= 'A' && l[i] <= 'Z'))
+                {
+                    flag = false;
+                    Console.WriteLine("Введены недопустимые символы");
+                    Console.ReadKey();
+                    break;
+                }
+            }
+            if (flag)
+                Console.WriteLine("Текст правильный");
+            Console.ReadKey();
+        }
+    }
+}

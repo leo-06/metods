@@ -1,0 +1,35 @@
+using System;
+
+namespace ConsoleApp19
+{
+    class Program
+    {
+        static void Print(string symbol)
+        {
+            Console.WriteLine(symbol);
+        }
+
+
+        static void Main(string[] args)
+        {
+    
+
+            string symbols = "!@#$% ";
+
+            string symbol = Console.ReadLine();
+
+            if (symbols.Contains(symbol))
+            {
+                Print($"выбран символ {symbol}");
+            }
+
+            else
+            {
+                Print("Такого символа нет");
+            }
+         
+            Console.ReadKey();
+        }
+
+    }
+}
