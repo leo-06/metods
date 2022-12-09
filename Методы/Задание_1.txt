@@ -11,7 +11,7 @@ namespace ConsoleApp18
         static void Main(string[] args)
         {
             string l = "world";
-            //string login = "g39fаgksl";
+            
             if (l.Length < 2 || l.Length > 10)
             {
                 Console.WriteLine("Неверная длина текста (не менее 2 и не более 10 символов");
