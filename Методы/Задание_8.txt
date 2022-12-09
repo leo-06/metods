@@ -1,35 +1,25 @@
-using System;
+using System; 
+using System.Collections.Generic; 
+using System.Linq; 
+using System.Text; 
+using System.Threading.Tasks; 
 
-namespace ConsoleApp19
+namespace ConsoleApp24 
 {
-    class Program
+ internal class Program 
     {
-        static void Print(string symbol)
+ static void Print(string [] args) 
         {
-            Console.WriteLine(symbol);
+ Console.WriteLine(); 
         }
 
 
-        static void Main(string[] args)
+ static void Main(string[] args) 
         {
-    
+ Print(new string('A', 5)); 
+ Console.ReadKey(); 
 
-            string symbols = "!@#$% ";
 
-            string symbol = Console.ReadLine();
-
-            if (symbols.Contains(symbol))
-            {
-                Print($"выбран символ {symbol}");
-            }
-
-            else
-            {
-                Print("Такого символа нет");
-            }
-         
-            Console.ReadKey();
         }
-
     }
 }
